@@ -107,6 +107,16 @@ namespace TicTacToe
                 OScore += 1;
                 ResetBoard();
             }
+
+            List<int> allArrayValues = new List<int>();
+            foreach (int elem in ScoreArray)
+                allArrayValues.Add(elem);
+
+            if (!allArrayValues.Contains(0))
+            {
+                MessageBox.Show("Cats game");
+                ResetBoard();
+            }
         }
 
         private void ResetBoard()
